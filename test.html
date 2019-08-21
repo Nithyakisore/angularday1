@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<script>
+var cart = {
+
+getCostprice : function(){
+    return 100;
+},
+
+getSellingPrice : function(){
+    // this is used to access the parent context lamda or flat arrow
+
+    getprofit = ()=> {
+
+                return this.getCostprice() * 0.2;
+    }
+    //return getprofit.call(this) + this.getCostprice();  // calling same function with different contetxt
+    //return getprofit.apply(this) + this.getCostprice();
+    //return getprofit.bind(this) + this.getCostprice();
+    //return getprofit() + this.getCostprice();
+}
+
+
+}
+console.log(cart.getSellingPrice());
+
+</script>
+<body>
+    
+</body>
+</html>

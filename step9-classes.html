@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+class Person{
+    constructor(pow){
+        this.power = pow;
+    }
+
+ 
+}
+class Hero extends Person{
+    constructor(title,fname,lname,pow){
+
+        super(pow)
+        this.title = title;
+        this.fname = fname;
+        this.lname = lname;
+        this._secret = "top_secret";
+    }
+
+    fullname(){
+        return this.fname+" "+ this.lname;
+    }
+
+    get secret(){
+
+    }
+    set secret(newvalue){
+        this._secret = newvalue;
+    }
+};
+var hero1 = new Hero("Ironman","Tony","Stark");
+var hero2= new Hero("Spiderman","peter","parker");
+console.log(hero1.fullname === hero2.fullname);
+console.log(hero1.title,hero1.fullname());
+</script>
+
+
+<body>
+    
+</body>
+</html>
+
